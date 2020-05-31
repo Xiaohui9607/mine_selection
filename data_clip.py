@@ -7,7 +7,7 @@ import numpy as np
 import cv2
 from utils import read_tif
 # get all images from the folders
-path = '../data/mine'
+path = '../data/mine/raw/0'
 image_paths = glob.glob(os.path.join(path, '*.tif'))
 SHOW_IMAGE = False
 for image_path in image_paths:
@@ -61,8 +61,9 @@ for image_path in image_paths:
     for x,y,w,h in boundRect:
         stones_ih.append(ih[y:y+h, x:x+w])
         stones_il.append(il[y:y+h, x:x+w])
+
     # TODO: save stones into local 1 by 1
-
-
+    pass
+    cv2.imwrite()
 
 
